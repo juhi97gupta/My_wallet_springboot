@@ -1,0 +1,54 @@
+<h3>Find By Mobile number</h3>
+<div style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="lastname">Enter your Mobile no :</label>
+      <input type="text" class="form-control" id="age" required [(ngModel)]="mobile" name="mobile">
+    </div>
+
+    <div class="btn-group">
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </form>
+</div>
+
+<table border="2"><tr><th>Account No</th>
+            <th>Mobile No</th>
+          <th>Account Holder Name</th>
+        <th>Account Balance</th>
+      <th colspan="2">Action</th></tr>
+      <tr><td>{{ob.id}}</td>
+      <td>{{ob.mobile}}</td>
+    <td>{{ob.accHolder}}</td>
+  <td>{{ob.balance}}</td>
+<td><button type="button" class="button btn-danger" (click)='deleteCustomer()'>Delete</button></td>
+<td><button type="button" class="button btn-danger" (click)='onUpdate()'>Update</button></td></tr></table>
+
+
+<div *ngIf="status">
+  <form (ngSubmit)="updateCustomer()">
+    <div class="form-group">
+      <label for="name">Account Id:-</label>
+      <input type="text" class="form-control" id="mobile" required [(ngModel)]="ob.id" name="id">
+    </div>
+    <div class="form-group">
+      <label for="name">Mobile No:-</label>
+      <input type="text" class="form-control" id="mobile" required [(ngModel)]="ob.mobile" name="mobile">
+    </div>
+    <div class="form-group">
+      <label for="name">Account Holder Name:-</label>
+      <input type="text" class="form-control" id="mobile" required [(ngModel)]="ob.accHolder" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Account Balance:-</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="ob.balance" name="balance">
+    </div>
+    
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+
+    

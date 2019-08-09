@@ -1,0 +1,16 @@
+<table border="2">
+<tr>
+        <th>Account No</th>
+        <th>Mobile No</th>
+      <th>Account Holder Name</th>
+    <th>Account Balance</th></tr>
+    
+<tr *ngFor="let account of accounts | async" style="width: 300px;">
+<td>{{account.id}}</td>
+    <td>{{account.mobile}}</td>
+  <td>{{account.accHolder}}</td>
+<td>{{account.balance}}</td>
+</tr>
+
+
+</table>
